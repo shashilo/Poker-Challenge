@@ -74,6 +74,59 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.sass$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            // Requires sass-loader@^7.0.0
+            options: {
+              // This is the path to your variables
+              data: "@import '@/styles/variables.scss'"
+            },
+            // Requires sass-loader@^8.0.0
+            options: {
+              // This is the path to your variables
+              prependData: "@import '@/styles/variables.scss'"
+            },
+          },
+        ],
+      },
+      // SCSS has different line endings than SASS
+      // and needs a semicolon after the import.
+      {
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            // Requires sass-loader@^7.0.0
+            options: {
+              // This is the path to your variables
+              data: "@import '@/styles/variables.scss';"
+            },
+            // Requires sass-loader@^8.0.0
+            options: {
+              // This is the path to your variables
+              prependData: "@import '@/styles/variables.scss';"
+            },
+          },
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1 }
+          },
+          'postcss-loader'
+        ]
       }
     ]
   },

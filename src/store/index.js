@@ -2,9 +2,8 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import router from '../router'
 import axios from 'axios'
-import VueAxios from 'vue-axios'
 
-Vue.use(Vuex, VueAxios, axios)
+Vue.use(Vuex, axios)
 
 export const store = new Vuex.Store({
   state: {

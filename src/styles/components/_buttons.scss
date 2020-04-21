@@ -1,0 +1,14 @@
+.btn-primary {
+  background-color: $blueDark;
+  border-radius: 1.5rem;
+  color: $yellow;
+  font-size: 2.1rem;
+  padding: 0.5rem 3rem;
+  font-weight: bold;
+  transition: 300ms ease all;
+
+  &:hover {
+    background-color: lighten($blueDark, 10%);
+  }
+}
+

@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 *, *:before, *:after {
@@ -7,4 +8,18 @@ html {
 }
 
 body {
+  font-size: 1.4rem;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+#app {
+  background-color: $polar;
+  min-height: 100vh;
+}
+
+.page {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  max-width: 168rem;
+  margin: auto;
 }

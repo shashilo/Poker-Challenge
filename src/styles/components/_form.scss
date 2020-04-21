@@ -1,0 +1,14 @@
+label {
+  color: $graylight;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+input[type="text"] {
+  border: 1px #ccd2df solid;
+  border-radius: .5rem;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.05);
+  color: $gray;
+  padding: .5rem 1rem;
+  width: 100%;
+}
